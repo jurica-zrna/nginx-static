@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi8/ubi-minimal:8.0
 
-RUN microdnf -y install --nodocs nginx \
+RUN microdnf -y install --nodocs --disableplugin=subscription-manager nginx \
   && rm  /usr/share/nginx/html/* \
   && microdnf clean all \
   && chgrp -R 0 /var/run \
