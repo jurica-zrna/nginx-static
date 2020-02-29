@@ -9,7 +9,7 @@ RUN microdnf -y install --nodocs nginx \
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 8081
+EXPOSE 8080
 
 VOLUME ["/usr/share/nginx/html/"]
 
