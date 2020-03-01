@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi8/ubi-minimal:8.0
 
-RUN microdnf -y install --nodocs nginx \
+RUN microdnf -y install --nodocs nginx rsync tar \
   && rm  /usr/share/nginx/html/* \
   && microdnf clean all \
   && touch /var/run/nginx.pid \
